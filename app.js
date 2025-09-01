@@ -42,6 +42,8 @@ const blogSql = "select * from blog";
 
 
 
+
+
 });
 
 // sendFile = Método do express que envia arquivos HTML para a tela
@@ -67,10 +69,15 @@ app.post('/blog/criar', (req, res)=>{
     var subtitulo = req.body.subtitulo;
     var conteudo = req.body.conteudo;
 
+
+
     var sql = "INSERT INTO blog(titulo, subtitulo, conteudo) VALUES (?, ?, ?)";
     conexao.query(sql, [titulo, subtitulo, conteudo], function(error){
         if (error) throw error;
         res.redirect('/');
+
+        console.log("Blog "+ titulo + "foi adicionado");
+        console.log("Conteudo" + conteudo);
     })
 })
 
