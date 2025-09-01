@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./parciais/header.ejs')%>
+<body>
+    <%- include('./parciais/nav.ejs')%>
+    <div class="criar-conteudo-blog">
+        <form method="post">
+            <label for="titulo">Título do Blog:</label>
+            <input type="text" name="titulo" id="titulo" required>
+            <label for="text-curto">Texto curto do Blog</label>
+            <input type="text" name='subtitulo'  id="texto-curto" required>
+            <label for="conteudo">Conteúdo do Blog</label>
+            <textarea id="conteudo" name="conteudo" required></textarea>
+            <button>Enviar</button>
+        </form>
+    </div>
+    <%- include('./parciais/footer.ejs') %>
+</body>
+</html>
